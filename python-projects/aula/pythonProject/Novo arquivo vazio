@@ -1,0 +1,19 @@
+export FLASK_APP=api/run.py
+flask db init
+flask db migrate
+flask db upgrade
+flask 2.1.2
+werkzeug 2.1.2
+flask-migrate 2.5.2
+flask-restful 0.3.9
+sqlalchemy 1.4.36
+flask-sqlalchemy 2.5.1
+marshmallow-sqlalchemy 0.28.0
+flask-marshmallow 0.14.0
+mysqlclient 2.1.0
+
+{
+    "nome":"Assistente virtual",
+    "descricao":"desenvolvimento assistente virtual com python",
+    "data_publicacao": "2022-02-03"
+}
