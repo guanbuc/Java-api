@@ -58,11 +58,11 @@ public class TarefaController {
     // DELETE /api/tarefas/{id} - Deleta uma tarefa
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteTarefa(@PathVariable Long id) {
-        if (tarefaRepository.existsById(id)) {
-            tarefaRepository.deleteById(id);
-            return ResponseEntity.noContent().build(); // Retorna 204 No Content (sucesso sem conteúdo)
-        } else {
-            return ResponseEntity.notFound().build(); // Retorna 404 Not Found
-        }
+        return tarefaRepository.findById(id)
+                .map(tarefa -> {
+                    tarefaRepository.delete(tarefa);
+                    return ResponseEntity.noContent().<Void>build();
+                })
+                .orElseGet(() -> ResponseEntity.notFound().build());
     }
 }
