@@ -1,0 +1,5 @@
+org/example/Main.class
+com/exemplo/minhaapitarefas/model/Tarefa.class
+com/exemplo/minhaapitarefas/controller/TarefaController.class
+com/exemplo/minhaapitarefas/repository/TarefaRepository.class
+com/exemplo/minhaapitarefas/MinhaapitarefasApplication.class

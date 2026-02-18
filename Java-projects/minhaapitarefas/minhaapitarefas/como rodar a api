@@ -1,0 +1,14 @@
+GET /api/tarefas — lista todas as tarefas
+GET /api/tarefas/{id} — retorna tarefa por id
+POST /api/tarefas — cria tarefa
+PUT /api/tarefas/{id} — atualiza tarefa
+DELETE /api/tarefas/{id} — remove tarefa
+
+Abra no navegador:
+Listar tarefas: http://localhost:8080/api/tarefas
+H2 console: http://localhost:8080/h2-console
+
+curl -s -X POST http://localhost:8080/api/tarefas -H "Content-Type: application/json" -d 'top{"titulo":"T1","descricao":"desc1","concluida":false}'
+curl -s -X POST http://localhost:8080/api/tarefas -H "Content-Type: application/json" -d '{"titulo":"T2","descricao":"desc2","concluida":true}'
+curl http://localhost:8080/api/tarefas | jq .
+
